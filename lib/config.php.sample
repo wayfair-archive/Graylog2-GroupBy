@@ -1,22 +1,22 @@
 <?php
 
-	define("ELASTICSEARCH_HOST", "localhost"); # the hostname/ip to connect to ElasticSearch
-	define("ELASTICSEARCH_PORT", "9200"); # the port to connect to ElasticSearch
-	define("DEFAULT_HOSTNAME", "*"); # the hostname to search for if none entered
-	define("DEFAULT_START_DATE", "1 hour ago"); # the start date to search from if none entered
-	define("DEFAULT_END_DATE", "now"); # the end date to search til if none entered
-	define("DEFAULT_SEARCH_STRING", "logs"); # the defaults string to search for is none entered
+    define("ELASTICSEARCH_HOST", "localhost"); # the hostname/ip to connect to ElasticSearch
+    define("ELASTICSEARCH_PORT", "9200"); # the port to connect to ElasticSearch
+    define("DEFAULT_HOSTNAME", "*"); # the hostname to search for if none entered
+    define("DEFAULT_START_DATE", "1 hour ago"); # the start date to search from if none entered
+    define("DEFAULT_END_DATE", "now"); # the end date to search til if none entered
+    define("DEFAULT_SEARCH_STRING", "logs"); # the defaults string to search for is none entered
 
 
-	# DONT CHANGE ANYTHING UNDER THIS LINE
-	# ----------------------------------------------------------------------------------------------------------------
+    # DONT CHANGE ANYTHING UNDER THIS LINE
+    # ----------------------------------------------------------------------------------------------------------------
 
-	# This is how I override the $_POST variables if you send a "short" url
-	if (isset($_GET['su']) && !isset($_POST['hostname'])) {
+    # This is how I override the $_POST variables if you send a "short" url
+    if (isset($_GET['su']) && !isset($_POST['hostname'])) {
         $_POST = unshorten_url($_GET['su']);
     }
 
-	$hostname = (isset($_POST['hostname']) && strlen($_POST['hostname']) !== 0) ? $_POST['hostname'] : DEFAULT_HOSTNAME;
+    $hostname = (isset($_POST['hostname']) && strlen($_POST['hostname']) !== 0) ? $_POST['hostname'] : DEFAULT_HOSTNAME;
     $timeframe_start = (isset($_POST['timeframe_start']) && strlen($_POST['timeframe_start']) !== 0) ? $_POST['timeframe_start'] : DEFAULT_START_DATE;
     $timeframe_end = (isset($_POST['timeframe_end']) && strlen($_POST['timeframe_end']) !== 0) ? $_POST['timeframe_end'] : DEFAULT_END_DATE;
     $grouping = (isset($_POST['grouping']) && strlen($_POST['grouping']) !== 0) ? $_POST['grouping'] : DEFAULT_SEARCH_STRING';
