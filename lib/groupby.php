@@ -9,7 +9,7 @@ require_once './lib/config.php';
  * @return string the encoded values in string format
  */
 function shorten_url($params) {
-    return base64_encode(serialize($params));
+    return urlencode(gzcompress(serialize($params),9));
 }
 
 /*
@@ -18,7 +18,7 @@ function shorten_url($params) {
  * @return array the decoded string
  */
 function unshorten_url($value) {
-    return unserialize(base64_decode($value));
+    return unserialize(gzuncompress(urldecode($value)));
 }
 
 /*
