@@ -19,6 +19,6 @@
     $hostname = (isset($_POST['hostname']) && strlen($_POST['hostname']) !== 0) ? $_POST['hostname'] : DEFAULT_HOSTNAME;
     $timeframe_start = (isset($_POST['timeframe_start']) && strlen($_POST['timeframe_start']) !== 0) ? $_POST['timeframe_start'] : DEFAULT_START_DATE;
     $timeframe_end = (isset($_POST['timeframe_end']) && strlen($_POST['timeframe_end']) !== 0) ? $_POST['timeframe_end'] : DEFAULT_END_DATE;
-    $grouping = (isset($_POST['grouping']) && strlen($_POST['grouping']) !== 0) ? $_POST['grouping'] : DEFAULT_SEARCH_STRING';
+    $grouping = (isset($_POST['grouping']) && strlen($_POST['grouping']) !== 0) ? $_POST['grouping'] : DEFAULT_SEARCH_STRING;
 
 ?>
