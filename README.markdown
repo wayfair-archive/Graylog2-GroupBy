@@ -22,3 +22,5 @@ define("DEFAULT_SEARCH_STRING", "logs");
 * [Bootstrap by Twitter](https://github.com/twitter/bootstrap/)
 * [ElasticSearch by nervetattoe](https://github.com/nervetattoo/elasticsearch)
 
+## Requirements
+* php curl
