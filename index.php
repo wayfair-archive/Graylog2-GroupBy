@@ -20,8 +20,8 @@
                     <a class="brand" href="#">Graylog2 GroupBy</a>
                     <div class="nav-collapse">
                         <ul class="nav">
-                            <li class="active"><a href="/groupby">Home</a></li>
-                            <li class="inactive"><a href="/groupby?detailed=true">Just Graphs</a></li>
+                            <li class="active"><a href="<?php echo BASE; ?>">Home</a></li>
+                            <li class="inactive"><a href="<?php echo BASE; ?>/?detailed=true">Just Graphs</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
@@ -56,7 +56,7 @@
 
         $r = $results['hits']['hits'];
         if (!isset($_GET['details'])) {
-            echo "<b>FOUND: ".count($results['hits']['hits'])."</b><br/><a href='/groupby/?su=".$shorturl."'> Short Url</a></br></br>\n";
+            echo "<b>FOUND: ".count($results['hits']['hits'])."</b><br/><a href='".BASE."/?su=".$shorturl."'> Short Url</a></br></br>\n";
     ?>
 
         <div class="container">
@@ -88,7 +88,7 @@
                         echo print_row(array(
                             strftime('%T',$result['time']),
                             $result['host'],
-                            "<a href=\"/groupby/?details=true&su=".urlencode($tempshort)."\">".substr($dup['grouping'], 0,800)."</a>",
+                            "<a href=\"".BASE."/?details=true&su=".urlencode($tempshort)."\">".substr($dup['grouping'], 0,800)."</a>",
                             $result['value'],
                         ),4)."\n";
                         unset($dup);
@@ -99,7 +99,7 @@
         </div>
     <?php
          } else {
-             echo "<b>FOUND: ".count($results['hits']['hits'])."</b><br/><a href='/groupby/?details=true&su=".$shorturl."'> Short Url</a></br></br>\n";
+             echo "<b>FOUND: ".count($results['hits']['hits'])."</b><br/><a href='".BASE."/?details=true&su=".$shorturl."'> Short Url</a></br></br>\n";
              echo "<div class=\"container\">Error You Searched For:<br/><div class=\"span12\"><code>".$grouping."</code></div></div><br/>";
              $hosts = array();
              $times = array();

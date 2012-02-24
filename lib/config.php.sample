@@ -6,6 +6,7 @@
     define("DEFAULT_START_DATE", "1 hour ago"); # the start date to search from if none entered
     define("DEFAULT_END_DATE", "now"); # the end date to search til if none entered
     define("DEFAULT_SEARCH_STRING", "logs"); # the defaults string to search for is none entered
+    define("BASE","/groupby"); # web base for getting resources and such
 
 
     # DONT CHANGE ANYTHING UNDER THIS LINE
