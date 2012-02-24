@@ -21,7 +21,7 @@
                     <div class="nav-collapse">
                         <ul class="nav">
                             <li class="active"><a href="<?php echo BASE; ?>">Home</a></li>
-                            <li class="inactive"><a href="<?php echo BASE; ?>/?detailed=true">Just Graphs</a></li>
+                            <li class="inactive"><a href="<?php echo BASE; ?>/?details=true">Just Graphs</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
