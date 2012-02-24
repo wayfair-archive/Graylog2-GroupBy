@@ -16,6 +16,7 @@ define("DEFAULT_HOSTNAME", "*");
 define("DEFAULT_START_DATE", "1 hour ago");
 define("DEFAULT_END_DATE", "now");
 define("DEFAULT_SEARCH_STRING", "logs");
+define("BASE", "/groupby");
 ```
 
 ## Included code
