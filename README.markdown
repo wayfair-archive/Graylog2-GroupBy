@@ -7,7 +7,7 @@
 ## Configuration
 * To use, copy the sample config (lib/config.php.sample) to lib/config.php and make any
 changes you need
-```
+```php
 define("ELASTICSEARCH_HOST", "localhost"); # the hostname/ip to connect to ElasticSearch
 define("ELASTICSEARCH_PORT", "9200"); # the port to connect to ElasticSearch
 define("DEFAULT_HOSTNAME", "*"); # the hostname to search for if none entered
