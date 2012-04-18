@@ -58,12 +58,12 @@ function generate_query($hostname, $start, $stop, $words, $debug) {
                         array(
                             'query' => array(
                                 'text' => array(
-                                    'message' => array(
+                                    '_all' => array(
                                         'query' => join(' ', $words),
                                         'operator' => 'and'
                                     ))),),
                         array(
-                            'limit' => array('value' => 400)
+                            'limit' => array('value' => 1000)
                         )
                     )
                 )),),
